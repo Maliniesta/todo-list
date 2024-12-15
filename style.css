@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("img/muscul.jpg");
+  background-repeat: repeat;
+  background-size: 1000px 1000px; /* Garder la taille des images de fond */
+}
+
+h1 {
+  background: linear-gradient(45deg, grey, rgb(59, 86, 238));
+  font-size: 120px; /* Augmenter la taille du texte */
+  text-align: center; /* Centrer le texte */
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  width: 90%; /* Augmenter la largeur du conteneur */
+  max-width: 3000px; /* Ajouter une largeur maximale */
+  min-height: 80vh; /* Ajuster la hauteur minimale du conteneur */
+  border: 10px solid rgb(2, 1, 8);
+  border-radius: 9px;
+  padding: 40px; /* Augmenter l'espace intérieur */
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(45deg, grey, rgb(15, 203, 241));
+  justify-content: flex-start; /* S'assurer que le contenu commence en haut */
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between; /* Changer de space-around à space-between */
+  align-items: center;
+  margin-left: 20px; /* Réduire l'indentation */
+  margin-bottom: 20px; /* Ajouter un espace entre les éléments de la liste */
+  width: 100%; /* Utiliser toute la largeur disponible */
+}
+
+li p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 150px; /* Augmenter la taille de police */
+  font-weight: bold;
+  flex: 1;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  margin-bottom: 30px; /* Augmenter l'espace sous le formulaire */
+}
+
+form input {
+  flex: 1;
+  margin-right: 20px;
+  padding: 10px 15px; /* Ajouter plus de padding */
+}
+
+input {
+  padding: 10px 20px;
+  outline: 0;
+  border: 3px solid black;
+  height: 80px;
+  width: auto;
+  font-size: 70px;
+}
+
+button {
+  justify-content: flex-end;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 0 20px;
+  cursor: pointer;
+  width: 1000px;
+  height: auto;
+  font-size: 70px;
+}
+
+li.todo.done {
+  flex: 0 0 20px;
+  height: 500px;
+  border-radius: 30px;
+  margin-right: 15px;
+}
+
+.green {
+  background-color: rgb(10, 247, 10);
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Médias Queries pour les petits écrans */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 80px; /* Réduire la taille du texte pour les écrans moyens */
+  }
+
+  .container {
+    width: 95%; /* Réduire la largeur du conteneur sur les petits écrans */
+    padding: 20px; /* Réduire le padding */
+  }
+
+  li p {
+    font-size: 100px; /* Réduire la taille de la police des éléments de liste */
+  }
+
+  input {
+    font-size: 50px; /* Réduire la taille du texte des inputs */
+    height: 60px; /* Réduire la hauteur de l'input */
+  }
+
+  button {
+    font-size: 50px; /* Réduire la taille du texte sur les boutons */
+    width: 100%; /* Rendre les boutons plus larges */
+    padding: 15px 25px;
+  }
+
+  .green {
+    font-size: 50px; /* Réduire la taille des boutons de validation */
+  }
+}
+
+/* Médias Queries pour les très petits écrans (smartphones) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 50px; /* Réduire encore la taille du texte sur les très petits écrans */
+  }
+
+  .container {
+    padding: 10px; /* Réduire le padding pour gagner de la place */
+  }
+
+  li p {
+    font-size: 60px; /* Réduire encore plus la taille des tâches */
+  }
+
+  input {
+    font-size: 40px; /* Réduire la taille du texte des inputs */
+    height: 50px; /* Réduire la hauteur de l'input */
+  }
+
+  button {
+    font-size: 40px; /* Réduire la taille du texte sur les boutons */
+    padding: 10px 15px;
+  }
+
+  .green {
+    font-size: 40px; /* Réduire la taille des boutons de validation */
+  }
+}
