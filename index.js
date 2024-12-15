@@ -14,12 +14,12 @@ form.addEventListener("submit", (event) => {
 
 const todos = [
   {
-    text: "Example Tâche 1",
+    text: "Exemple Tâche 1",
     done: false,
     editMode: false,
   },
   {
-    text: "Example Tâche 2",
+    text: "Exemple Tâche 2",
     done: false,
     editMode: false,
   },
